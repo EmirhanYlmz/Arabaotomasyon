@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08634455-92F1-41D7-92D9-54960EAEEA46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Arabaotomasyon</RootNamespace>
+    <AssemblyName>Arabaotomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BussinesLogicLayer\AracEkleBLL.cs" />
+    <Compile Include="BussinesLogicLayer\hasarliBLL.cs" />
+    <Compile Include="BussinesLogicLayer\KiralamaBLL.cs" />
+    <Compile Include="BussinesLogicLayer\KullanicilarBLL.cs" />
+    <Compile Include="DataAccessObjectLayer\AracEkleDAO.cs" />
+    <Compile Include="DataAccessObjectLayer\hasarliDAO.cs" />
+    <Compile Include="DataAccessObjectLayer\KiralamaDAO.cs" />
+    <Compile Include="DataAccessObjectLayer\KullanicilarDAO.cs" />
+    <Compile Include="DbConnection\VeriTabanibaglantisi.cs" />
+    <Compile Include="PocosLayer\AracEklePoco.cs" />
+    <Compile Include="PocosLayer\hasarliPoco.cs" />
+    <Compile Include="PocosLayer\KiralamaPoco.cs" />
+    <Compile Include="PocosLayer\KullanicilarPoco.cs" />
+    <Compile Include="PresantationLayer\Anamenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Anamenu.Designer.cs">
+      <DependentUpon>Anamenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracEkle.Designer.cs">
+      <DependentUpon>AracEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracGuncelle.Designer.cs">
+      <DependentUpon>AracGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracListele.Designer.cs">
+      <DependentUpon>AracListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Araclar\AracSil.Designer.cs">
+      <DependentUpon>AracSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıEkle.Designer.cs">
+      <DependentUpon>HasarlıEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıGüncelle.Designer.cs">
+      <DependentUpon>HasarlıGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıListele.Designer.cs">
+      <DependentUpon>HasarlıListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Hasarlı\HasarlıSil.Designer.cs">
+      <DependentUpon>HasarlıSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaEkle.Designer.cs">
+      <DependentUpon>KiralamaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaGuncelle.Designer.cs">
+      <DependentUpon>KiralamaGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaListele.Designer.cs">
+      <DependentUpon>KiralamaListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kiralama\KiralamaSil.Designer.cs">
+      <DependentUpon>KiralamaSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıEkle.Designer.cs">
+      <DependentUpon>KullanıcıEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıGuncelle.Designer.cs">
+      <DependentUpon>KullanıcıGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıListele.Designer.cs">
+      <DependentUpon>KullanıcıListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Kullanıcılar\KullanıcıSil.Designer.cs">
+      <DependentUpon>KullanıcıSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\OturumAc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\OturumAc.Designer.cs">
+      <DependentUpon>OturumAc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresantationLayer\Anamenu.resx">
+      <DependentUpon>Anamenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Araclar\AracEkle.resx">
+      <DependentUpon>AracEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Araclar\AracGuncelle.resx">
+      <DependentUpon>AracGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Araclar\AracListele.resx">
+      <DependentUpon>AracListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Araclar\AracSil.resx">
+      <DependentUpon>AracSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Hasarlı\HasarlıEkle.resx">
+      <DependentUpon>HasarlıEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Hasarlı\HasarlıGüncelle.resx">
+      <DependentUpon>HasarlıGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Hasarlı\HasarlıListele.resx">
+      <DependentUpon>HasarlıListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Hasarlı\HasarlıSil.resx">
+      <DependentUpon>HasarlıSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kiralama\KiralamaEkle.resx">
+      <DependentUpon>KiralamaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kiralama\KiralamaGuncelle.resx">
+      <DependentUpon>KiralamaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kiralama\KiralamaListele.resx">
+      <DependentUpon>KiralamaListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kiralama\KiralamaSil.resx">
+      <DependentUpon>KiralamaSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kullanıcılar\KullanıcıEkle.resx">
+      <DependentUpon>KullanıcıEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kullanıcılar\KullanıcıGuncelle.resx">
+      <DependentUpon>KullanıcıGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kullanıcılar\KullanıcıListele.resx">
+      <DependentUpon>KullanıcıListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Kullanıcılar\KullanıcıSil.resx">
+      <DependentUpon>KullanıcıSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\OturumAc.resx">
+      <DependentUpon>OturumAc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="İmages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
